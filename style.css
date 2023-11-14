@@ -1,0 +1,157 @@
+/* 
+Quicksand : light-300 regular-400 bold-700
+Roboto Serif : thin-100 light-300 regular-400 bold-700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Roboto+Serif:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Quicksand';
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+}
+
+.main {
+    margin: 8rem 0rem 2rem 6rem;
+}
+
+/* Titre */
+
+.title {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Roboto Serif';
+    font-size: 2rem;
+}
+
+.french {
+    font-weight: 300;
+}
+
+.korean {
+    font-weight: 400;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.line :nth-child(1) {
+    width: 8rem;
+}
+
+.line :nth-child(2) {
+    width: 100%;
+    margin-right: 6rem;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    clear: both;
+    gap: 4rem;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 3px 0px #00000040;
+}
+
+.block, .block * {
+    background-color: #FFFFFF;
+}
+
+.block h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.block img {
+    object-fit: scale-down;
+}
+
+/* Liens */
+
+a {
+    color: #333;
+}
+
+/* Keyboard */
+
+.keyboard {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.keyboard img {
+    object-fit: scale-down;
+}
+
+.footer {
+    margin-top: 1rem;
+}
+
+.footer a {
+    font-size: 2rem;
+}
+
+/* Alphabet */
+
+.letter-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.letter-block h2,
+.lesson h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.letter-block hr {
+    width: 11rem;
+}
+
+.double hr,
+.lesson hr {
+    width: 20rem;
+}
+
+.group-table {
+    display: flex;
+    gap: 2rem;
+}
+
+td {
+    padding: 1rem 1rem 1rem 0rem;
+    text-align: center;
+}
+
+table tr td p:nth-child(1) {
+    font-weight: 700;
+}
+
+.lesson {
+    margin-top: 2rem;
+}
