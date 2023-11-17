@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coréen - Alphabet</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="index.html">< Retour</a>
+        </div>
+        <div class="title">
+            <h1 class="french">Vocabulaire</h1>
+            <h1 class="korean">단어집</h1>
+        </div>
+        <div class="line">
+            <hr>
+            <hr>
+        </div>
+        <div class="content">
+            <div class="aside lesson">
+                <h2>Sommaire</h2>
+                <hr>
+                <ul class="sumary">
+                    <li><button type="button" class="overlay-trigger" id="school" onclick="on('school')">École</button></li>
+                    <li><button type="button" class="overlay-trigger" id="house" onclick="on('house')">Maison</button></li>
+                    <li><button type="button" class="overlay-trigger" onclick="on()">Famille/Amis</button></li>
+                    <li><button type="button" class="overlay-trigger" onclick="on()">Travail</button></li>
+                    <li><button type="button" class="overlay-trigger" onclick="on()">Animaux</button></li>
+                    <li><button type="button" class="overlay-trigger" onclick="on()">Nature</button></li>
+
+                </ul>
+            </div>
+            <div class="overlay-block">
+                <div class="overlay lesson" id="school-overlay">
+                    <h2>École</h2>
+                    <table>
+                        <tr>
+                            <td>학교 : école</td>
+                        </tr>
+                        <tr>
+                            <td>도서관 : bibliothèque</td>
+                        </tr>
+                        <tr>
+                            <td>선생님 : professeur</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="house-overlay">
+                    <h2>Maison</h2>
+                    <table>
+                        <tr>
+                            <td>학교 : école</td>
+                        </tr>
+                        <tr>
+                            <td>도서관 : bibliothèque</td>
+                        </tr>
+                        <tr>
+                            <td>선생님 : professeur</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function on(overlayId) {
+            switch(overlayId) {
+                case "school":
+                    document.getElementById("school-overlay").style.visibility = "visible";
+                    break;
+                case "house":
+                    document.getElementById("house-overlay").style.visibility = "visible";
+                    break;
+            }
+        }
+
+        window.addEventListener('click', function(e) {
+            if (!document.getElementById("school").contains(e.target)) {
+                document.getElementById("school-overlay").style.visibility = "hidden";
+            }
+            if (!document.getElementById("house").contains(e.target)) {
+                document.getElementById("house-overlay").style.visibility = "hidden";
+            }
+        })
+    </script>
+</body>
+</html>
