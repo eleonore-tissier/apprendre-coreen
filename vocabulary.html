@@ -24,16 +24,68 @@
                 <h2>Sommaire</h2>
                 <hr>
                 <ul class="sumary">
+                    <li><button type="button" class="overlay-trigger" id="human" onclick="on('human')">Être humain</button></li>
+                    <li><button type="button" class="overlay-trigger" id="daily" onclick="on('daily')">Vie quotidienne</button></li>
+                    <li><button type="button" class="overlay-trigger" id="dates" onclick="on('dates')">Jours, mois, années</button></li>
+                    <li><button type="button" class="overlay-trigger" id="weather" onclick="on('weather')">Météo</button></li>
                     <li><button type="button" class="overlay-trigger" id="school" onclick="on('school')">École</button></li>
                     <li><button type="button" class="overlay-trigger" id="house" onclick="on('house')">Maison</button></li>
-                    <li><button type="button" class="overlay-trigger" onclick="on()">Famille/Amis</button></li>
-                    <li><button type="button" class="overlay-trigger" onclick="on()">Travail</button></li>
-                    <li><button type="button" class="overlay-trigger" onclick="on()">Animaux</button></li>
-                    <li><button type="button" class="overlay-trigger" onclick="on()">Nature</button></li>
+                    <li><button type="button" class="overlay-trigger" id="family" onclick="on('family')">Famille/Amis</button></li>
+                    <li><button type="button" class="overlay-trigger" id="titles" onclick="on('titles')">Titres honorifiques</button></li>
+                    <li><button type="button" class="overlay-trigger" id="work" onclick="on('work')">Travail</button></li>
+                    <li><button type="button" class="overlay-trigger" id="animal" onclick="on('animal')">Animaux</button></li>
+                    <li><button type="button" class="overlay-trigger" id="nature" onclick="on('nature')">Nature</button></li>
 
                 </ul>
             </div>
             <div class="overlay-block">
+                <div class="overlay lesson" id="human-overlay">
+                    <h2>Être humain</h2>
+                    <table>
+                        <tr>
+                            <td>남자 : homme</td>
+                        </tr>
+                        <tr>
+                            <td>여자 : femme</td>
+                        </tr>
+                        <tr>
+                            <td>아이 : enfant</td>
+                        </tr>
+                        <tr>
+                            <td>여자아이 : fille</td>
+                        </tr>
+                        <tr>
+                            <td>남자아이 : garçon</td>
+                        </tr>
+                        <tr>
+                            <td>아기 : bébé</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="daily-overlay">
+                    <h2>Vie quotidienne</h2>
+                    <table>
+                        <tr>
+                            <td>En cours d'écriture</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="dates-overlay">
+                    <h2>Jours, mois, années</h2>
+                    <table>
+                        <tr>
+                            <td>En cours d'écriture</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="weather-overlay">
+                    <h2>Météo</h2>
+                    <table>
+                        <tr>
+                            <td>En cours d'écriture</td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="overlay lesson" id="school-overlay">
                     <h2>École</h2>
                     <table>
@@ -52,13 +104,174 @@
                     <h2>Maison</h2>
                     <table>
                         <tr>
-                            <td>학교 : école</td>
+                            <td>집 : maison</td>
                         </tr>
                         <tr>
-                            <td>도서관 : bibliothèque</td>
+                            <td>방 : pièce</td>
                         </tr>
                         <tr>
-                            <td>선생님 : professeur</td>
+                            <td>침대 : lit</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="family-overlay">
+                    <h2>Famille/Amis</h2>
+                    <table>
+                        <tr>
+                            <td>가족 : famille</td>
+                        </tr>
+                        <tr>
+                            <td>아버지 : père</td>
+                        </tr>
+                        <tr>
+                            <td>아빠 : papa</td>
+                        </tr>
+                        <tr>
+                            <td>어머니 : mère</td>
+                        </tr>
+                        <tr>
+                            <td>엄마 : maman</td>
+                        </tr>
+                        <tr>
+                            <td>오빠 : grand-frère (quand on est une femme)</td>
+                        </tr>
+                        <tr>
+                            <td>형 : grand-frère (quand on est un homme)</td>
+                        </tr>
+                        <tr>
+                            <td>언니 : grande-soeur (quand on est une femme)</td>
+                        </tr>
+                        <tr>
+                            <td>누나 : grande-soeur (quand on est un homme)</td>
+                        </tr>
+                        <tr>
+                            <td>할머니 : grand-mère</td>
+                        </tr>
+                        <tr>
+                            <td>할아버지 : grand-père</td>
+                        </tr>
+                        <tr>
+                            <td>진구 : amis</td>
+                        </tr>
+                        <tr>
+                            <td>남자진구 : petit-copain</td>
+                        </tr>
+                        <tr>
+                            <td>여자진구 : petite-copine</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="titles-overlay">
+                    <h2>Titres honorifiques</h2>
+                    <em>Les suffixes honorifiques s'attachent au titre ou au prénom (JAMAIS au nom de famille)</em>
+                    <table>
+                        <tr>
+                            <td>님 : suffixe très formel (personnes plus âgées, collèguesn supérieur, client, professeurs)</td>
+                        </tr>
+                        <tr>
+                            <td>씨 : suffixe formel (inconnu de statut égal)</td>
+                        </tr>
+                        <tr>
+                            <td>이 : suffixe informel, amical (amis)</td>
+                        </tr>
+                        <tr>
+                            <td>아(consonne)/야(voyelle) : suffixe informel lorsqu'on appelle quelqu'un (bon amis)</td>
+                        </tr>
+                        <tr>
+                            <td>선배 : supérieur hiérarchique/aîné (travail et école)</td>
+                        </tr>
+                        <tr>
+                            <td>후배 : junior (travail et école)</td>
+                        </tr>
+                        <tr>
+                            <td>막내 : le plus jeune d'un groupe</td>
+                        </tr>
+                        <tr>
+                            <td>아가씨 : mademoiselle</td>
+                        </tr>
+                        <tr>
+                            <td>아주마 : femme mariée plus âgée (insulte si dirigé vers une jeune femme)</td>
+                        </tr>
+                        <tr>
+                            <td>아주씨 : homme marié plus âgé</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="work-overlay">
+                    <h2>Travail</h2>
+                    <table>
+                        <tr>
+                            <td>일다 : travailler</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="animal-overlay">
+                    <h2>Animaux</h2>
+                    <table>
+                        <tr>
+                            <td>개 : chien</td>
+                        </tr>
+                        <tr>
+                            <td>고양기 : chat</td>
+                        </tr>
+                        <tr>
+                            <td>호랑기 : tigre</td>
+                        </tr>
+                        <tr>
+                            <td>토기 : lapin</td>
+                        </tr>
+                        <tr>
+                            <td>노래 : balenne</td>
+                        </tr>
+                        <tr>
+                            <td>나비 : papillon</td>
+                        </tr>
+                        <tr>
+                            <td>나방 : papillon de nuit</td>
+                        </tr>
+                        <tr>
+                            <td>까치 : pie</td>
+                        </tr>
+                        <tr>
+                            <td>소 : vache</td>
+                        </tr>
+                        <tr>
+                            <td>늑대 : loup</td>
+                        </tr>
+                        <tr>
+                            <td>상어 : requin</td>
+                        </tr>
+                        <tr>
+                            <td>물고기 : poisson</td>
+                        </tr>
+                        <tr>
+                            <td>말 : cheval</td>
+                        </tr>
+                        <tr>
+                            <td>곰 : ours</td>
+                        </tr>
+                        <tr>
+                            <td>닭 : poulet</td>
+                        </tr>
+                        <tr>
+                            <td>새 : oiseau</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="overlay lesson" id="nature-overlay">
+                    <h2>Nature</h2>
+                    <table>
+                        <tr>
+                            <td>나무 : arbre</td>
+                        </tr>
+                        <tr>
+                            <td>물 : eau</td>
+                        </tr>
+                        <tr>
+                            <td>산 : montagne</td>
+                        </tr>
+                        <tr>
+                            <td>섬 : île</td>
                         </tr>
                     </table>
                 </div>
@@ -69,20 +282,76 @@
         function on(overlayId) {
             switch(overlayId) {
                 case "school":
-                    document.getElementById("school-overlay").style.visibility = "visible";
+                    document.getElementById("school-overlay").classList.toggle('visible', true);
                     break;
                 case "house":
-                    document.getElementById("house-overlay").style.visibility = "visible";
+                    document.getElementById("house-overlay").classList.toggle('visible', true);
                     break;
-            }
+                case "family":
+                    console.log("here");
+                    document.getElementById("family-overlay").classList.toggle('visible', true);
+                    break;
+                case "human":
+                    document.getElementById("human-overlay").classList.toggle('visible', true);
+                    break;
+                case "titles":
+                    document.getElementById("titles-overlay").classList.toggle('visible', true);
+                    break;
+                case "work":
+                    document.getElementById("work-overlay").classList.toggle('visible', true);
+                    break;
+                case "animal":
+                    document.getElementById("animal-overlay").classList.toggle('visible', true);
+                    break;
+                case "nature":
+                    document.getElementById("nature-overlay").classList.toggle('visible', true);
+                    break;
+                case "dates":
+                    document.getElementById("dates-overlay").classList.toggle('visible', true);
+                    break;
+                case "daily":
+                    document.getElementById("daily-overlay").classList.toggle('visible', true);
+                    break;
+                case "weather":
+                    document.getElementById("weather-overlay").classList.toggle('visible', true);
+                    break;
+
+            }        
         }
 
         window.addEventListener('click', function(e) {
             if (!document.getElementById("school").contains(e.target)) {
-                document.getElementById("school-overlay").style.visibility = "hidden";
+                document.getElementById("school-overlay").classList.toggle('visible', false);
             }
             if (!document.getElementById("house").contains(e.target)) {
-                document.getElementById("house-overlay").style.visibility = "hidden";
+                document.getElementById("house-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("family").contains(e.target)) {
+                document.getElementById("family-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("human").contains(e.target)) {
+                document.getElementById("human-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("titles").contains(e.target)) {
+                document.getElementById("titles-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("work").contains(e.target)) {
+                document.getElementById("work-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("animal").contains(e.target)) {
+                document.getElementById("animal-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("nature").contains(e.target)) {
+                document.getElementById("nature-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("dates").contains(e.target)) {
+                document.getElementById("dates-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("daily").contains(e.target)) {
+                document.getElementById("daily-overlay").classList.toggle('visible', false);
+            }
+            if (!document.getElementById("weather").contains(e.target)) {
+                document.getElementById("weather-overlay").classList.toggle('visible', false);
             }
         })
     </script>

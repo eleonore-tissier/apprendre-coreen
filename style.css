@@ -229,13 +229,20 @@ ul.sumary {
     font-weight: 700;
 }
 
+.overlay-block {
+    position: relative;
+}
+
 .overlay {
     margin-top: 4rem;
     padding: 2rem;
     box-shadow: 0px 3px 3px 0px #00000040;
     border-radius: 20px;
     width: 70rem;
-    visibility: hidden;
+}
+
+.overlay:not(.visible) {
+    display: none;
 }
 
 .overlay, .overlay * {
